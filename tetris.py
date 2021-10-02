@@ -220,8 +220,10 @@ while not done:
     text_game_over1 = font1.render("Press ESC", True, (255, 215, 0))
 
     screen.blit(text, [0, 0])
-   
-
+    if game.state == "gameover":
+        screen.blit(text_game_over, [20, 200])
+        screen.blit(text_game_over1, [25, 265])
+        
     pygame.display.flip()
     clock.tick(fps)
 
